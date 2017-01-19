@@ -1,0 +1,97 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css');
+
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.button-interphase {
+  margin: 5px;
+}
+
+.Clips-crud-container {
+  text-align:center;
+  padding: 25px;
+  height: 400px;
+}
+
+.Cliplist-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.columns {
+  padding: 0px;
+}
+
+.controls-row {
+  margin: 0px 2px;
+  border-bottom: 1px solid black;
+
+}
+
+.End-time {
+  color: red;
+}
+
+.Find-tag-style {
+  padding: 25px;
+  text-align: center;
+}
+
+.Form-style {
+  padding:20px;
+}
+
+.Full-video-item {
+  background: #E6E6FA;
+}
+
+.Marker-style {
+  color: #fff;
+}
+
+.Modal-body-container {
+  text-align: center;
+}
+
+.Modal-spinner {
+  height: 300px;
+  width: 300px;
+}
+
+.Persisted-style {
+  color: green
+}
+
+.Player-style {
+  width: 100%;
+}
+
+.Playing-tag {
+  color: red;
+}
+
+.playback-text {
+  text-align: left;
+}
+
+.Selected-tag {
+  color: blue;
+}
+
+.Start-time {
+  color: green;
+}
+
+.Video-container {
+  margin-top: 20px;
+}
+
+.video-progress {
+  margin : 7px;
+}
