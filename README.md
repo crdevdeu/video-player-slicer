@@ -37,7 +37,7 @@
 
 ##Usage
 
--New clips can be added specifying name, tage name,start time, end time on the interphase that shows after clicking on the "New clip button".
+-New clips can be added specifying name, tage name,start time, end time on the interphase that shows after clicking on the "New clip" button.
 
 -The list of clips of user created clips will be rendered bellow the full video item.
 
