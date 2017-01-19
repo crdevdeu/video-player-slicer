@@ -39,17 +39,17 @@
 
 ##Usage
 
--New clips can be added specifying name, tage name,start time, end time on the interphase that shows after clicking on the "New clip" button.
+-New clips can be added specifying name, tag name,start time and end time on the interphase that shows after clicking on the "New clip" button.
 
--The list of clips of user created clips will be rendered bellow the full video item.
+-The list of user created clips will be rendered bellow the full video list item.
 
 -Video clips can be deleted and edited using the buttons displayed on the list of clips. In order to edit a clip an interphase to do so will render below the video.
 
--Clips can be played from the video player of from the list of clips.
+-Clips can be played from the video player or from the list of clips.
 
 -After a clip finishes it will jump to the next clip with a 3 second delay and animation.
 
--Clips can be saved for persistent use by clicking on the "save" button on each clip, a playlist will be created and it will persist after the browser is reloaded. Clicking on the button "Clear playlist" will clear the selected clips persistence.
+-Clips can be saved for persistent use by clicking on the "save" button, a playlist will be created and it will persist after the browser is reloaded. Clicking on the button "Clear playlist" will clear the clips persistence.
 
 -The list of clips can be filtered by tag name using the "Filter clips by tagname", all filtered clips will play in sequense skiping clips that were filtered out.
 
@@ -57,5 +57,5 @@
 
 -Every time a clip is created a marker on the full video timeline is generated, clicking on the marker will play the clip that is associated to it.
 
--The main Reactjs component can be reused in any page without the editing capabilities changing the  "this.allowedit" class propierty from false to true in the constructor  of the ClipList component (/src/components/ClipList.js)
+-The main Reactjs component can be reused in any page without the editing capabilities changing the  "this.allowedit" class propierty from false to true in the constructor of the ClipList component (/src/components/ClipList.js)
 
