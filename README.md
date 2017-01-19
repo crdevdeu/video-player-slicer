@@ -1,5 +1,6 @@
 ###Reactjs-redux video player/slicer
 
+Online version: https://video-player-slicer.herokuapp.com/
 
 ##Instalation
 
