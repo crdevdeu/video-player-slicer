@@ -3,6 +3,8 @@
 
 ##Instalation
 
+-Clone this repository: git clone https://github.com/ctrincones/video-player-slicer.git
+
 -Install dependencies: npm install
 
 -Start local development server: npm start
