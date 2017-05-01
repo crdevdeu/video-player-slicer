@@ -15,25 +15,22 @@ store.subscribe(() => {
   //adds persisted clip list to localStorage
   const appClipsList = store.getState().clipslist.clips;
   const  persistingClips = appClipsList.filter((item,index) => {
-       return item.persisted || index === 0;
-     });
+    return item.persisted || index === 0;
+  });
 
-    saveState({
-      clipslist: { ...store.getState().clipslist, editindex: null, deletesuccess: false, listcleared: false, clips: persistingClips }
-    });
- });
+  saveState({
+    clipslist: { ...store.getState().clipslist, editindex: null, deletesuccess: false, listcleared: false, clips: persistingClips }
+  });
+});
 
 class App extends Component {
-  componentDidMount(){
-    console.log(store);
-  }
   render() {
     return (
       <Provider store={store}>
         <AppContent />
       </Provider>
     );
-    }
+  }
 }
 
 export default App;

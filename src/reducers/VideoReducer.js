@@ -1,4 +1,5 @@
-import { VIDEO_LOADED,
+import { 
+  VIDEO_LOADED,
   PLAY_SELECTED_CLIP,
   PLAY_VIDEO,
   PAUSE_VIDEO,
@@ -12,9 +13,9 @@ import { VIDEO_LOADED,
 
 const INITIAL_STATE = {
   duration: {
-    hours:0,
-    minutes:0,
-    seconds:0
+    hours: 0,
+    minutes: 0,
+    seconds: 0
   },
   isplaying: false,
   ispaused: true,
@@ -29,32 +30,39 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch(action.type){
     case VIDEO_LOADED:
-      return {...state, duration: action.payload};
+      return { ...state, duration: action.payload };
     case PLAY_SELECTED_CLIP:
-      return {...state, currentclip: action.payload, isplaying: true, ispaused: false, loadingnextvideo: false, loadingpreviousvideo: false };
+      return { 
+        ...state, 
+        currentclip: action.payload, 
+        isplaying: true, 
+        ispaused: false, 
+        loadingnextvideo: false, 
+        loadingpreviousvideo: false 
+      };
     case PLAY_VIDEO:
-      return {...state, isplaying: true, ispaused: false, ended: false };
+      return { ...state, isplaying: true, ispaused: false, ended: false };
     case PAUSE_VIDEO:
-      return {...state, isplaying: false, ispaused: true, ended: false};
+      return { ...state, isplaying: false, ispaused: true, ended: false };
     case VIDEO_ENDED:
-      return {...state, ended: true,isplaying: false, ispaused: true};
+      return { ...state, ended: true,isplaying: false, ispaused: true };
     case DELETE_SELECTED_CLIP:
-      if(action.payload === state.currentclip){
-        return {...state, currentclip: action.payload - 1};
-      } else if(action.payload < state.currentclip) {
-        return {...state, currentclip: state.currentclip - 1};
+      if (action.payload === state.currentclip) {
+        return { ...state, currentclip: action.payload - 1 };
+      } else if (action.payload < state.currentclip) {
+        return { ...state, currentclip: state.currentclip - 1 };
       } else {
         return state;
       }
     case LOAD_NEXT_VIDEO:
-      return {...state,loadingnextvideo: true};
+      return { ...state,loadingnextvideo: true };
     case LOAD_PREVIOUS_VIDEO:
-      return {...state, loadingpreviousvideo: true};
+      return { ...state, loadingpreviousvideo: true };
     case UPDATE_PLAY_TIME:
-      return {...state, currentplaybacktime: action.payload};
+      return { ...state, currentplaybacktime: action.payload };
     case UPDATE_PLAYBACK_RATIO:
-      return {...state, playbackratio: action.payload};
+      return { ...state, playbackratio: action.payload };
     default:
-    return state;
+      return state;
   }
 }

@@ -14,7 +14,7 @@ export const videoLoaded = (duration) => {
   return {
     type: VIDEO_LOADED,
     payload : duration
-   };
+  };
 }
 
 export const createFirstClip = (videoDuration) => {

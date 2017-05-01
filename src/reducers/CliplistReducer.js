@@ -18,17 +18,37 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch(action.type){
     case CREATE_FIRST_CLIP:
-     return {...state, clips: [...state.clips, action.payload ]};
+      return { ...state, clips: [...state.clips, action.payload] };
     case ADD_NEW_CLIP:
-     return {...state, clips: [...state.clips,action.payload]};
+      return { ...state, clips: [...state.clips,action.payload] };
     case SAVE_CLIP_EDITION:
-      return {...state, clips: [...state.clips.slice(0,action.editindex), action.payload, ...state.clips.slice(action.editindex + 1)]};
+      return {
+        ...state, 
+        clips: [
+          ...state.clips.slice(0,action.editindex),
+          action.payload, 
+          ...state.clips.slice(action.editindex + 1)] 
+      };
     case DELETE_SELECTED_CLIP:
-      return {...state, clips:[...state.clips.slice(0,action.payload),...state.clips.slice(action.payload + 1)], deletesuccess: true};
+      return {
+        ...state, 
+        clips: [
+          ...state.clips.slice(0,action.payload),
+          ...state.clips.slice(action.payload + 1)
+        ], 
+        deletesuccess: true
+      };
     case CLEAR_NOTIFICATIONS:
       return {...state, deletesuccess: false, listcleared: false};
     case PERSIST_CLIP:
-      return {...state, clips: [...state.clips.slice(0,action.payload), {...state.clips[action.payload], persisted: true}, ...state.clips.slice(action.payload + 1) ]};
+      return {
+        ...state, 
+        clips: [
+          ...state.clips.slice(0,action.payload),
+          { ...state.clips[action.payload], persisted: true },
+          ...state.clips.slice(action.payload + 1)
+        ]
+      };
     case CLEAR_PLAYLIST:
       const newList = state.clips.map((value)=>{
         value.persisted = false;
@@ -36,6 +56,6 @@ export default (state = INITIAL_STATE, action) => {
       });
       return {...state, clips: newList, listcleared: true};
     default:
-    return state;
+      return state;
   }
 }

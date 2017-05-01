@@ -54,14 +54,16 @@ export const clipStartMinuteChanged = (minute) => {
   return {
     type: CLIP_START_MINUTE_CHANGED,
     payload: minute
-     };
+  };
 }
+
 export const clipStartSecondChanged = (second) => {
   return {
     type: CLIP_START_SECOND_CHANGED,
     payload: second
   };
 }
+
 export const clipEndHourChanged = (hour) => {
   return {
     type: CLIP_END_HOUR_CHANGED,
@@ -83,7 +85,7 @@ export const clipEndSecondChanged = (seconds) => {
   };
 }
 
-export const addNewClip = ({ videostart, videoend, name, tagname}, fullvidduration) => {
+export const addNewClip = ({ videostart, videoend, name, tagname }, fullvidduration) => {
   const payload = {
     videostart,
     videoend,
@@ -98,7 +100,7 @@ export const addNewClip = ({ videostart, videoend, name, tagname}, fullviddurati
   };
 }
 
-export const saveEditedClip = ({ videostart, videoend, name, tagname},editindex, fullvidduration,persisted) => {
+export const saveEditedClip = ({ videostart, videoend, name, tagname }, editindex, fullvidduration, persisted) => {
   const payload = {
     videostart,
     videoend,
@@ -115,23 +117,23 @@ export const saveEditedClip = ({ videostart, videoend, name, tagname},editindex,
 }
 
 export const showError = (errorType) => {
-  switch(errorType){
+  switch (errorType) {
     case 1:
-    return {
-      type: INPUT_ERROR
-    };
-   case 2:
-   return {
-     type: PLAYINTERVAL_ERROR
-   };
-   default:
-   return errorType;
+      return {
+        type: INPUT_ERROR
+      };
+    case 2:
+      return {
+        type: PLAYINTERVAL_ERROR
+      };
+    default:
+      return errorType;
   }
- }
+}
 
- export const changeTagSearchValue = (value) => {
-   return {
-     type: TAG_SEARCH_CHANGED,
-     payload: value
-   };
- }
+export const changeTagSearchValue = (value) => {
+  return {
+    type: TAG_SEARCH_CHANGED,
+    payload: value
+  };
+}

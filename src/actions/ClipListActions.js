@@ -14,7 +14,7 @@ export const playSelectedClip = (index) => {
   };
 }
 
-export const editSelectedClip = (clip,index) => {
+export const editSelectedClip = (clip, index) => {
   return {
     type: EDIT_SELECTED_CLIP,
     payload: clip,
@@ -22,7 +22,7 @@ export const editSelectedClip = (clip,index) => {
   };
 }
 
-export const deleteSelectedClip = (index,fullvidduration) => {
+export const deleteSelectedClip = (index, fullvidduration) => {
   return {
     type: DELETE_SELECTED_CLIP,
     payload: index,
