@@ -6,7 +6,7 @@ HTML5 video player that allows to create and play clips from a video
 
 * Clone this repository
 
-'git clone https://github.com/ctrincones/video-player-slicer.git'
+`git clone https://github.com/ctrincones/video-player-slicer.git`
 
 * Install dependencies
 
