@@ -1,60 +1,68 @@
-###Reactjs-redux video player/slicer
+# Reactjs-redux video player/slicer
 
-##Instalation
+HTML5 video player that allows to create and play clips from a video
 
--Clone this repository: git clone https://github.com/ctrincones/video-player-slicer.git
+## Instalation
 
--Install dependencies: npm install
+* Clone this repository
 
--Start local development server: npm start
+'git clone https://github.com/ctrincones/video-player-slicer.git'
 
-##Features:
+* Install dependencies
 
--An HTML5 video player that utilizes media fragments  
+`npm install`
 
--A list of clips to be played in the video player 
+* Start local development server
 
--The first item in the list should be the full video 
+`npm start`
 
--An interface to add new clips to the list by specifying a name, start time, and end time. 
+## Features
 
--The ability to delete clips from the list (excluding the full video item )  
+* An HTML5 video player that utilizes media fragments  
 
--The ability to edit existing clips in the list  
+* A list of clips to be played in the video player 
 
--The ability to play clips in the video player 
+* The first item in the list should be the full video 
 
--The ability to automatically jump to the next clip after it finishes, with a 3 second waiting  period and appropriate loading animation.  
+* An interface to add new clips to the list by specifying a name, start time, and end time. 
 
--The ability to ‘save’ clips for persistent use.  
+* The ability to delete clips from the list (excluding the full video item )  
 
--The ability to add arbitrary ‘tags’ to clips so that they can be filtered by the tag name.  
+* The ability to edit existing clips in the list  
 
--Hotkeys to jump between the current clip and next and previous clips (if there are any).   
+* The ability to play clips in the video player 
 
--Markers on the video player timeline that denote where a clip starts (full video only).Clicking the marker chooses that clip and plays it from that point.   
+* The ability to automatically jump to the next clip after it finishes, with a 3 second waiting  period and appropriate loading animation.  
 
--The ability to reuse the the player and playlist on another page without the editing  capabilities 
+* The ability to ‘save’ clips for persistent use.  
 
-##Usage
+* The ability to add arbitrary ‘tags’ to clips so that they can be filtered by the tag name.  
 
--New clips can be added specifying name, tag name,start time and end time on the interphase that shows after clicking on the "New clip" button.
+* Hotkeys to jump between the current clip and next and previous clips (if there are any).   
 
--The list of user created clips will be rendered bellow the full video list item.
+* Markers on the video player timeline that denote where a clip starts (full video only).Clicking the marker chooses that clip and plays it from that point.   
 
--Video clips can be deleted and edited using the buttons displayed on the list of clips. In order to edit a clip an interphase to do so will render below the video.
+* The ability to reuse the the player and playlist on another page without the editing  capabilities 
 
--Clips can be played from the video player or from the list of clips.
+## Usage
 
--After a clip finishes it will jump to the next clip with a 3 second delay and animation.
+* New clips can be added specifying name, tag name,start time and end time on the interphase that shows after clicking on the "New clip" button.
 
--Clips can be saved for persistent use by clicking on the "save" button, a playlist will be created and it will persist after the browser is reloaded. Clicking on the button "Clear playlist" will clear the clips persistence.
+* The list of user created clips will be rendered bellow the full video list item.
 
--The list of clips can be filtered by tag name using the "Filter clips by tagname", all filtered clips will play in sequense skiping clips that were filtered out.
+* Video clips can be deleted and edited using the buttons displayed on the list of clips. In order to edit a clip an interphase to do so will render below the video.
 
--Pressing the keys "p+n" will jump to the next clip and "p+b" to the previous one (just the letters not the "+" sign).
+* Clips can be played from the video player or from the list of clips.
 
--Every time a clip is created a marker on the full video timeline is generated, clicking on the marker will play the clip that is associated to it.
+* After a clip finishes it will jump to the next clip with a 3 second delay and animation.
 
--The main Reactjs component can be reused in any page without the editing capabilities changing the  "this.allowedit" class propierty from false to true in the constructor of the ClipList component (/src/components/ClipList.js)
+* Clips can be saved for persistent use by clicking on the "save" button, a playlist will be created and it will persist after the browser is reloaded. Clicking on the button "Clear playlist" will clear the clips persistence.
+
+* The list of clips can be filtered by tag name using the "Filter clips by tagname", all filtered clips will play in sequense skiping clips that were filtered out.
+
+* Pressing the keys "p+n" will jump to the next clip and "p+b" to the previous one (just the letters not the "+" sign).
+
+* Every time a clip is created a marker on the full video timeline is generated, clicking on the marker will play the clip that is associated to it.
+
+* The main Reactjs component can be reused in any page without the editing capabilities changing the  "this.allowedit" class propierty from false to true in the constructor of the ClipList component (/src/components/ClipList.js)
 
